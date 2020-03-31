@@ -1,3 +1,0 @@
-"# Decision-Maker" 
-"# Expensify" 
-"# Expensify" 
