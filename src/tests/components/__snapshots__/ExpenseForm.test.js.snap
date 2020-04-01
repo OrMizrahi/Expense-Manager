@@ -120,7 +120,7 @@ exports[`should render ExpenseForm without expense 1`] = `
       onChange={[Function]}
       placeholder="Amount"
       type="text"
-      value={0}
+      value=""
     />
     <SingleDatePicker
       anchorDirection="left"
@@ -224,7 +224,7 @@ exports[`should render error for invalid form submission 1`] = `
       onChange={[Function]}
       placeholder="Amount"
       type="text"
-      value={0}
+      value=""
     />
     <SingleDatePicker
       anchorDirection="left"
@@ -315,7 +315,7 @@ exports[`should render error for invalid form submission 1`] = `
 exports[`should render error for invalid form submission 2`] = `
 <div>
   <p>
-    Please provide description and amount!
+    Please provide description and amount.
   </p>
   <form
     onSubmit={[Function]}
@@ -331,7 +331,7 @@ exports[`should render error for invalid form submission 2`] = `
       onChange={[Function]}
       placeholder="Amount"
       type="text"
-      value={0}
+      value=""
     />
     <SingleDatePicker
       anchorDirection="left"

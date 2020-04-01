@@ -3,18 +3,18 @@ import moment from 'moment';
 import { SingleDatePicker } from 'react-dates';
 
 export default class ExpenseForm extends React.Component {
-	state = {
-		description: this.props.expense ? this.props.expense.description : '',
-		note: this.props.expense ? this.props.expense.note : '',
-		amount: this.props.expense
-			? (this.props.expense.amount / 100).toString()
-			: 0,
-		createdAt: this.props.expense
-			? moment(this.props.expense.createdAt)
-			: moment(),
-		calendarFocused: false,
-		error: ''
-	};
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			description: props.expense ? props.expense.description : '',
+			note: props.expense ? props.expense.note : '',
+			amount: props.expense ? (props.expense.amount / 100).toString() : '',
+			createdAt: props.expense ? moment(props.expense.createdAt) : moment(),
+			calendarFocused: false,
+			error: ''
+		};
+	}
 
 	onDescriptionChange = e => {
 		const description = e.target.value;
@@ -48,7 +48,7 @@ export default class ExpenseForm extends React.Component {
 
 		if (!this.state.description || !this.state.amount) {
 			this.setState(() => ({
-				error: 'Please provide description and amount!'
+				error: 'Please provide description and amount.'
 			}));
 		} else {
 			this.setState(() => ({ error: '' }));
