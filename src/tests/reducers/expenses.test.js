@@ -62,3 +62,12 @@ test('should add expense', () => {
 	const state = expenseReducers(expenses, action);
 	expect(state).toEqual([...expenses, action.expense]);
 });
+
+test('should set expenses', () => {
+	const action = {
+		type: 'SET_EXPENSES',
+		expenses: [expenses[2]]
+	};
+	const state = expenseReducers(expenses, action);
+	expect(state).toEqual([expenses[2]]);
+});
