@@ -7,10 +7,12 @@ const firebaseConfig = {
 	projectId: process.env.FIREBASE_PROJECT_ID,
 	storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
 	messagingSenderId: process.env.MESSAGING_SENDER_ID,
-	appId: process.env.FIREBASE_APP_ID
+	appId: process.env.FIREBASE_APP_ID,
 };
+
 firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
-export { firebase, database as default };
+export { firebase, googleAuthProvider, database as default };
